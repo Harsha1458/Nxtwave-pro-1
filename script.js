@@ -3,20 +3,12 @@ let loader = document.getElementById('loader');
 let demoForm = document.getElementById('my-form');
 
 loadButton.addEventListener('click', function() {
-
-    // Disable the button
-    // and prevent further clicks
-    loadButton.disabled = true;
-    loader.style.display = 'inline-block';
-
-    let that = this; // Save reference to loadButton
+    loadButton.disabled = true;              
+    loader.style.display = 'inline-block';   
 
     setTimeout(function() {
-    
-        // Restore the button state 
-        // after the operation is done
-        that.disabled = false;
-        loader.style.display = 'none';
-        demoForm.reset();
+        loadButton.disabled = false;         
+        loader.style.display = 'none';      
+        demoForm.reset();                 
     }, 2000);
 });
